@@ -45,6 +45,7 @@
             qLabel = new Label();
             cLabel = new Label();
             nLabel = new Label();
+            CSVbutton = new Button();
             ((System.ComponentModel.ISupportInitialize)InventoryGridView).BeginInit();
             SuspendLayout();
             // 
@@ -67,7 +68,7 @@
             InventoryGridView.BackgroundColor = Color.White;
             InventoryGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             InventoryGridView.GridColor = Color.White;
-            InventoryGridView.Location = new Point(12, 271);
+            InventoryGridView.Location = new Point(21, 280);
             InventoryGridView.Name = "InventoryGridView";
             InventoryGridView.RowHeadersWidth = 51;
             InventoryGridView.Size = new Size(1393, 453);
@@ -77,7 +78,7 @@
             // pTextBox
             // 
             pTextBox.Anchor = AnchorStyles.Top;
-            pTextBox.Location = new Point(226, 188);
+            pTextBox.Location = new Point(226, 177);
             pTextBox.Name = "pTextBox";
             pTextBox.Size = new Size(315, 27);
             pTextBox.TabIndex = 2;
@@ -86,7 +87,7 @@
             // 
             newButton.Anchor = AnchorStyles.Top;
             newButton.Font = new Font("Constantia", 12F);
-            newButton.Location = new Point(225, 221);
+            newButton.Location = new Point(226, 210);
             newButton.Name = "newButton";
             newButton.Size = new Size(315, 29);
             newButton.TabIndex = 3;
@@ -98,7 +99,7 @@
             // 
             deleteButton.Anchor = AnchorStyles.Top;
             deleteButton.Font = new Font("Constantia", 12F);
-            deleteButton.Location = new Point(868, 221);
+            deleteButton.Location = new Point(868, 210);
             deleteButton.Name = "deleteButton";
             deleteButton.Size = new Size(317, 29);
             deleteButton.TabIndex = 4;
@@ -110,7 +111,7 @@
             // 
             saveButton.Anchor = AnchorStyles.Top;
             saveButton.Font = new Font("Constantia", 12F);
-            saveButton.Location = new Point(547, 221);
+            saveButton.Location = new Point(545, 210);
             saveButton.Name = "saveButton";
             saveButton.Size = new Size(315, 29);
             saveButton.TabIndex = 5;
@@ -121,7 +122,7 @@
             // nTextBox
             // 
             nTextBox.Anchor = AnchorStyles.Top;
-            nTextBox.Location = new Point(546, 131);
+            nTextBox.Location = new Point(546, 119);
             nTextBox.Name = "nTextBox";
             nTextBox.Size = new Size(315, 27);
             nTextBox.TabIndex = 6;
@@ -129,7 +130,7 @@
             // sTextBox
             // 
             sTextBox.Anchor = AnchorStyles.Top;
-            sTextBox.Location = new Point(226, 131);
+            sTextBox.Location = new Point(226, 119);
             sTextBox.Name = "sTextBox";
             sTextBox.Size = new Size(315, 27);
             sTextBox.TabIndex = 8;
@@ -137,7 +138,7 @@
             // qTextBox
             // 
             qTextBox.Anchor = AnchorStyles.Top;
-            qTextBox.Location = new Point(870, 188);
+            qTextBox.Location = new Point(870, 177);
             qTextBox.Name = "qTextBox";
             qTextBox.Size = new Size(315, 27);
             qTextBox.TabIndex = 9;
@@ -145,7 +146,7 @@
             // dTextBox
             // 
             dTextBox.Anchor = AnchorStyles.Top;
-            dTextBox.Location = new Point(547, 188);
+            dTextBox.Location = new Point(546, 177);
             dTextBox.Name = "dTextBox";
             dTextBox.Size = new Size(314, 27);
             dTextBox.TabIndex = 10;
@@ -155,7 +156,7 @@
             cComboBox.Anchor = AnchorStyles.Top;
             cComboBox.FormattingEnabled = true;
             cComboBox.Items.AddRange(new object[] { "Automotive", "Hardware", "Groceries", "Health", "Toys" });
-            cComboBox.Location = new Point(870, 131);
+            cComboBox.Location = new Point(870, 119);
             cComboBox.Name = "cComboBox";
             cComboBox.Size = new Size(314, 28);
             cComboBox.TabIndex = 11;
@@ -165,7 +166,7 @@
             sLabel.Anchor = AnchorStyles.Top;
             sLabel.Font = new Font("Constantia", 12F, FontStyle.Bold);
             sLabel.ForeColor = Color.WhiteSmoke;
-            sLabel.Location = new Point(226, 102);
+            sLabel.Location = new Point(226, 91);
             sLabel.Name = "sLabel";
             sLabel.Size = new Size(314, 25);
             sLabel.TabIndex = 12;
@@ -177,7 +178,7 @@
             dLabel.BackColor = Color.Transparent;
             dLabel.Font = new Font("Constantia", 12F, FontStyle.Bold);
             dLabel.ForeColor = Color.WhiteSmoke;
-            dLabel.Location = new Point(547, 160);
+            dLabel.Location = new Point(546, 149);
             dLabel.Name = "dLabel";
             dLabel.Size = new Size(315, 25);
             dLabel.TabIndex = 13;
@@ -188,7 +189,7 @@
             pLabel.Anchor = AnchorStyles.Top;
             pLabel.Font = new Font("Constantia", 12F, FontStyle.Bold);
             pLabel.ForeColor = Color.WhiteSmoke;
-            pLabel.Location = new Point(226, 160);
+            pLabel.Location = new Point(226, 149);
             pLabel.Name = "pLabel";
             pLabel.Size = new Size(315, 25);
             pLabel.TabIndex = 14;
@@ -199,7 +200,7 @@
             qLabel.Anchor = AnchorStyles.Top;
             qLabel.Font = new Font("Constantia", 12F, FontStyle.Bold);
             qLabel.ForeColor = Color.WhiteSmoke;
-            qLabel.Location = new Point(870, 160);
+            qLabel.Location = new Point(870, 149);
             qLabel.Name = "qLabel";
             qLabel.Size = new Size(315, 25);
             qLabel.TabIndex = 15;
@@ -210,7 +211,7 @@
             cLabel.Anchor = AnchorStyles.Top;
             cLabel.Font = new Font("Constantia", 12F, FontStyle.Bold);
             cLabel.ForeColor = Color.WhiteSmoke;
-            cLabel.Location = new Point(870, 101);
+            cLabel.Location = new Point(870, 91);
             cLabel.Name = "cLabel";
             cLabel.Size = new Size(315, 25);
             cLabel.TabIndex = 16;
@@ -222,11 +223,23 @@
             nLabel.BackColor = Color.Transparent;
             nLabel.Font = new Font("Constantia", 12F, FontStyle.Bold);
             nLabel.ForeColor = Color.WhiteSmoke;
-            nLabel.Location = new Point(547, 101);
+            nLabel.Location = new Point(546, 89);
             nLabel.Name = "nLabel";
             nLabel.Size = new Size(314, 27);
             nLabel.TabIndex = 17;
             nLabel.Text = "Name:";
+            // 
+            // CSVbutton
+            // 
+            CSVbutton.Anchor = AnchorStyles.Top;
+            CSVbutton.Font = new Font("Constantia", 12F);
+            CSVbutton.Location = new Point(547, 245);
+            CSVbutton.Name = "CSVbutton";
+            CSVbutton.Size = new Size(315, 29);
+            CSVbutton.TabIndex = 18;
+            CSVbutton.Text = "Export to CSV";
+            CSVbutton.UseVisualStyleBackColor = true;
+            CSVbutton.Click += CSVbutton_Click;
             // 
             // InventoryManagment
             // 
@@ -235,6 +248,7 @@
             AutoSize = true;
             BackColor = Color.FromArgb(101, 182, 253);
             ClientSize = new Size(1417, 736);
+            Controls.Add(CSVbutton);
             Controls.Add(nLabel);
             Controls.Add(cLabel);
             Controls.Add(qLabel);
@@ -279,5 +293,6 @@
         private Label qLabel;
         private Label cLabel;
         private Label nLabel;
+        private Button CSVbutton;
     }
 }

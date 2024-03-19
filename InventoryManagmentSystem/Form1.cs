@@ -1,4 +1,6 @@
 using System.Data;
+using System.Text;
+
 
 namespace InventoryManagmentSystem
 {
@@ -31,8 +33,6 @@ namespace InventoryManagmentSystem
             string category = (string)cComboBox.SelectedItem;
 
             inventory.Rows.Add(sku, name, category, price, description, quantity);
-
-
 
             newButton_Click(sender, e);
         }
@@ -77,12 +77,28 @@ namespace InventoryManagmentSystem
             inventory.Columns.Add("Price");
             inventory.Columns.Add("Description");
             inventory.Columns.Add("Quantity");
+            inventory.Columns.Add("Sold");
 
             InventoryGridView.DataSource = inventory;
             PerformAutoScale();
 
         }
 
-        
+        private void CSVbutton_Click(object sender, EventArgs e)
+        {
+            StringBuilder sb = new StringBuilder();
+
+            string[] columnNames = inventory.Columns.Cast<DataColumn>().Select(column => column.ColumnName).ToArray();
+            sb.AppendLine(string.Join(",", columnNames));
+
+            foreach (DataRow row in inventory.Rows)
+            {
+                string[] fields = row.ItemArray.Select(field => field.ToString()).ToArray();
+                sb.AppendLine(string.Join(",", fields));
+            }
+
+            File.WriteAllText("test.csv", sb.ToString());
+            newButton_Click(sender, e);
+        }
     }
 }
