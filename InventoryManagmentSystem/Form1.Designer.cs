@@ -46,6 +46,8 @@
             cLabel = new Label();
             nLabel = new Label();
             CSVbutton = new Button();
+            sellButton = new Button();
+            buyButton = new Button();
             ((System.ComponentModel.ISupportInitialize)InventoryGridView).BeginInit();
             SuspendLayout();
             // 
@@ -241,6 +243,30 @@
             CSVbutton.UseVisualStyleBackColor = true;
             CSVbutton.Click += CSVbutton_Click;
             // 
+            // sellButton
+            // 
+            sellButton.Anchor = AnchorStyles.Top;
+            sellButton.Font = new Font("Constantia", 12F);
+            sellButton.Location = new Point(225, 245);
+            sellButton.Name = "sellButton";
+            sellButton.Size = new Size(315, 29);
+            sellButton.TabIndex = 19;
+            sellButton.Text = "Sell";
+            sellButton.UseVisualStyleBackColor = true;
+            sellButton.Click += sellButton_Click;
+            // 
+            // buyButton
+            // 
+            buyButton.Anchor = AnchorStyles.Top;
+            buyButton.Font = new Font("Constantia", 12F);
+            buyButton.Location = new Point(870, 245);
+            buyButton.Name = "buyButton";
+            buyButton.Size = new Size(315, 29);
+            buyButton.TabIndex = 20;
+            buyButton.Text = "Buy";
+            buyButton.UseVisualStyleBackColor = true;
+            buyButton.Click += buyButton_Click;
+            // 
             // InventoryManagment
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -248,6 +274,8 @@
             AutoSize = true;
             BackColor = Color.FromArgb(101, 182, 253);
             ClientSize = new Size(1417, 736);
+            Controls.Add(buyButton);
+            Controls.Add(sellButton);
             Controls.Add(CSVbutton);
             Controls.Add(nLabel);
             Controls.Add(cLabel);
@@ -294,5 +322,7 @@
         private Label cLabel;
         private Label nLabel;
         private Button CSVbutton;
+        private Button sellButton;
+        private Button buyButton;
     }
 }
