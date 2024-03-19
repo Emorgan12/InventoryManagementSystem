@@ -79,6 +79,8 @@ namespace InventoryManagmentSystem
             inventory.Columns.Add("Quantity");
 
             InventoryGridView.DataSource = inventory;
+            PerformAutoScale();
+
         }
 
         

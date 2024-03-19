@@ -50,9 +50,10 @@
             // 
             // titleLabel
             // 
+            titleLabel.Anchor = AnchorStyles.Top;
             titleLabel.Font = new Font("Constantia", 25.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             titleLabel.ForeColor = Color.White;
-            titleLabel.Location = new Point(0, 0);
+            titleLabel.Location = new Point(217, 0);
             titleLabel.Name = "titleLabel";
             titleLabel.Size = new Size(1000, 60);
             titleLabel.TabIndex = 0;
@@ -61,28 +62,31 @@
             // 
             // InventoryGridView
             // 
+            InventoryGridView.Anchor = AnchorStyles.Bottom;
             InventoryGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             InventoryGridView.BackgroundColor = Color.White;
             InventoryGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             InventoryGridView.GridColor = Color.White;
-            InventoryGridView.Location = new Point(12, 256);
+            InventoryGridView.Location = new Point(12, 271);
             InventoryGridView.Name = "InventoryGridView";
             InventoryGridView.RowHeadersWidth = 51;
-            InventoryGridView.Size = new Size(958, 485);
+            InventoryGridView.Size = new Size(1393, 453);
             InventoryGridView.TabIndex = 1;
             InventoryGridView.CellContentDoubleClick += InventoryGridView_CellContentDoubleClick;
             // 
             // pTextBox
             // 
-            pTextBox.Location = new Point(12, 188);
+            pTextBox.Anchor = AnchorStyles.Top;
+            pTextBox.Location = new Point(226, 188);
             pTextBox.Name = "pTextBox";
             pTextBox.Size = new Size(315, 27);
             pTextBox.TabIndex = 2;
             // 
             // newButton
             // 
+            newButton.Anchor = AnchorStyles.Top;
             newButton.Font = new Font("Constantia", 12F);
-            newButton.Location = new Point(12, 221);
+            newButton.Location = new Point(225, 221);
             newButton.Name = "newButton";
             newButton.Size = new Size(315, 29);
             newButton.TabIndex = 3;
@@ -92,10 +96,11 @@
             // 
             // deleteButton
             // 
+            deleteButton.Anchor = AnchorStyles.Top;
             deleteButton.Font = new Font("Constantia", 12F);
-            deleteButton.Location = new Point(655, 221);
+            deleteButton.Location = new Point(868, 221);
             deleteButton.Name = "deleteButton";
-            deleteButton.Size = new Size(315, 29);
+            deleteButton.Size = new Size(317, 29);
             deleteButton.TabIndex = 4;
             deleteButton.Text = "Delete";
             deleteButton.UseVisualStyleBackColor = true;
@@ -103,8 +108,9 @@
             // 
             // saveButton
             // 
+            saveButton.Anchor = AnchorStyles.Top;
             saveButton.Font = new Font("Constantia", 12F);
-            saveButton.Location = new Point(334, 221);
+            saveButton.Location = new Point(547, 221);
             saveButton.Name = "saveButton";
             saveButton.Size = new Size(315, 29);
             saveButton.TabIndex = 5;
@@ -114,56 +120,64 @@
             // 
             // nTextBox
             // 
-            nTextBox.Location = new Point(334, 130);
+            nTextBox.Anchor = AnchorStyles.Top;
+            nTextBox.Location = new Point(546, 131);
             nTextBox.Name = "nTextBox";
             nTextBox.Size = new Size(315, 27);
             nTextBox.TabIndex = 6;
             // 
             // sTextBox
             // 
-            sTextBox.Location = new Point(12, 130);
+            sTextBox.Anchor = AnchorStyles.Top;
+            sTextBox.Location = new Point(226, 131);
             sTextBox.Name = "sTextBox";
             sTextBox.Size = new Size(315, 27);
             sTextBox.TabIndex = 8;
             // 
             // qTextBox
             // 
-            qTextBox.Location = new Point(655, 188);
+            qTextBox.Anchor = AnchorStyles.Top;
+            qTextBox.Location = new Point(870, 188);
             qTextBox.Name = "qTextBox";
             qTextBox.Size = new Size(315, 27);
             qTextBox.TabIndex = 9;
             // 
             // dTextBox
             // 
-            dTextBox.Location = new Point(333, 188);
+            dTextBox.Anchor = AnchorStyles.Top;
+            dTextBox.Location = new Point(547, 188);
             dTextBox.Name = "dTextBox";
-            dTextBox.Size = new Size(315, 27);
+            dTextBox.Size = new Size(314, 27);
             dTextBox.TabIndex = 10;
             // 
             // cComboBox
             // 
+            cComboBox.Anchor = AnchorStyles.Top;
             cComboBox.FormattingEnabled = true;
             cComboBox.Items.AddRange(new object[] { "Automotive", "Hardware", "Groceries", "Health", "Toys" });
-            cComboBox.Location = new Point(655, 129);
+            cComboBox.Location = new Point(870, 131);
             cComboBox.Name = "cComboBox";
-            cComboBox.Size = new Size(315, 28);
+            cComboBox.Size = new Size(314, 28);
             cComboBox.TabIndex = 11;
             // 
             // sLabel
             // 
+            sLabel.Anchor = AnchorStyles.Top;
             sLabel.Font = new Font("Constantia", 12F, FontStyle.Bold);
             sLabel.ForeColor = Color.WhiteSmoke;
-            sLabel.Location = new Point(12, 102);
+            sLabel.Location = new Point(226, 102);
             sLabel.Name = "sLabel";
-            sLabel.Size = new Size(315, 25);
+            sLabel.Size = new Size(314, 25);
             sLabel.TabIndex = 12;
             sLabel.Text = "SKU:";
             // 
             // dLabel
             // 
+            dLabel.Anchor = AnchorStyles.Top;
+            dLabel.BackColor = Color.Transparent;
             dLabel.Font = new Font("Constantia", 12F, FontStyle.Bold);
             dLabel.ForeColor = Color.WhiteSmoke;
-            dLabel.Location = new Point(333, 160);
+            dLabel.Location = new Point(547, 160);
             dLabel.Name = "dLabel";
             dLabel.Size = new Size(315, 25);
             dLabel.TabIndex = 13;
@@ -171,9 +185,10 @@
             // 
             // pLabel
             // 
+            pLabel.Anchor = AnchorStyles.Top;
             pLabel.Font = new Font("Constantia", 12F, FontStyle.Bold);
             pLabel.ForeColor = Color.WhiteSmoke;
-            pLabel.Location = new Point(12, 160);
+            pLabel.Location = new Point(226, 160);
             pLabel.Name = "pLabel";
             pLabel.Size = new Size(315, 25);
             pLabel.TabIndex = 14;
@@ -181,9 +196,10 @@
             // 
             // qLabel
             // 
+            qLabel.Anchor = AnchorStyles.Top;
             qLabel.Font = new Font("Constantia", 12F, FontStyle.Bold);
             qLabel.ForeColor = Color.WhiteSmoke;
-            qLabel.Location = new Point(655, 160);
+            qLabel.Location = new Point(870, 160);
             qLabel.Name = "qLabel";
             qLabel.Size = new Size(315, 25);
             qLabel.TabIndex = 15;
@@ -191,9 +207,10 @@
             // 
             // cLabel
             // 
+            cLabel.Anchor = AnchorStyles.Top;
             cLabel.Font = new Font("Constantia", 12F, FontStyle.Bold);
             cLabel.ForeColor = Color.WhiteSmoke;
-            cLabel.Location = new Point(655, 101);
+            cLabel.Location = new Point(870, 101);
             cLabel.Name = "cLabel";
             cLabel.Size = new Size(315, 25);
             cLabel.TabIndex = 16;
@@ -201,11 +218,13 @@
             // 
             // nLabel
             // 
+            nLabel.Anchor = AnchorStyles.Top;
+            nLabel.BackColor = Color.Transparent;
             nLabel.Font = new Font("Constantia", 12F, FontStyle.Bold);
             nLabel.ForeColor = Color.WhiteSmoke;
-            nLabel.Location = new Point(333, 101);
+            nLabel.Location = new Point(547, 101);
             nLabel.Name = "nLabel";
-            nLabel.Size = new Size(315, 25);
+            nLabel.Size = new Size(314, 27);
             nLabel.TabIndex = 17;
             nLabel.Text = "Name:";
             // 
@@ -215,7 +234,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
             BackColor = Color.FromArgb(101, 182, 253);
-            ClientSize = new Size(982, 753);
+            ClientSize = new Size(1417, 736);
             Controls.Add(nLabel);
             Controls.Add(cLabel);
             Controls.Add(qLabel);
