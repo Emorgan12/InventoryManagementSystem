@@ -143,6 +143,7 @@
             // cComboBox
             // 
             cComboBox.FormattingEnabled = true;
+            cComboBox.Items.AddRange(new object[] { "Automotive", "Hardware", "Groceries", "Health", "Toys" });
             cComboBox.Location = new Point(655, 129);
             cComboBox.Name = "cComboBox";
             cComboBox.Size = new Size(315, 28);

@@ -31,16 +31,42 @@ namespace InventoryManagmentSystem
             string category = (string)cComboBox.SelectedItem;
 
             inventory.Rows.Add(sku, name, category, price, description, quantity);
+
+
+
+            newButton_Click(sender, e);
         }
 
         private void deleteButton_Click(object sender, EventArgs e)
         {
+            try
+            {
+                inventory.Rows[InventoryGridView.CurrentCell.RowIndex].Delete();
+            }
 
+            catch (Exception err)
+            {
+                Console.WriteLine("Error " + err);
+            }
         }
 
         private void InventoryGridView_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            try
+            {
+                sTextBox.Text = inventory.Rows[InventoryGridView.CurrentCell.RowIndex].ItemArray[0].ToString();
+                nTextBox.Text = inventory.Rows[InventoryGridView.CurrentCell.RowIndex].ItemArray[1].ToString();
+                pTextBox.Text = inventory.Rows[InventoryGridView.CurrentCell.RowIndex].ItemArray[3].ToString();
+                qTextBox.Text = inventory.Rows[InventoryGridView.CurrentCell.RowIndex].ItemArray[4].ToString();
+                dTextBox.Text = inventory.Rows[InventoryGridView.CurrentCell.RowIndex].ItemArray[5].ToString();
 
+                string itemToLookFor = inventory.Rows[InventoryGridView.CurrentCell.RowIndex].ItemArray[2].ToString();
+                cComboBox.SelectedIndex = cComboBox.Items.IndexOf(itemToLookFor);
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine("There has been an error: " + err);
+            }
         }
 
         private void InventoryManagment_Load(object sender, EventArgs e)
@@ -54,5 +80,7 @@ namespace InventoryManagmentSystem
 
             InventoryGridView.DataSource = inventory;
         }
+
+        
     }
 }
