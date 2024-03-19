@@ -272,7 +272,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
-            BackColor = Color.FromArgb(101, 182, 253);
+            BackColor = Color.FromArgb(255, 144, 196);
             ClientSize = new Size(1417, 736);
             Controls.Add(buyButton);
             Controls.Add(sellButton);
