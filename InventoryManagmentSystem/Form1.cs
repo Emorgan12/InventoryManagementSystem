@@ -72,22 +72,26 @@ namespace InventoryManagmentSystem
 
         private void deleteButton_Click(object sender, EventArgs e)
         {
-            try
+            if (InventoryGridView.CurrentCell != null)
             {
-                inventory.Rows[InventoryGridView.CurrentCell.RowIndex].Delete();
-            }
+                try
+                {
+                    inventory.Rows[InventoryGridView.CurrentCell.RowIndex].Delete();
+                }
 
-            catch (Exception err)
-            {
-                Console.WriteLine("Error " + err);
+                catch (Exception err)
+                {
+                    Console.WriteLine("Error " + err);
+                }
             }
+            else
+                MessageBox.Show("No Item selected");
         }
 
         private void InventoryGridView_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
-                ;
                 sTextBox.Text = inventory.Rows[InventoryGridView.CurrentCell.RowIndex].ItemArray[0].ToString();
                 pTextBox.Text = inventory.Rows[InventoryGridView.CurrentCell.RowIndex].ItemArray[3].ToString();
                 qTextBox.Text = inventory.Rows[InventoryGridView.CurrentCell.RowIndex].ItemArray[4].ToString();
@@ -120,21 +124,29 @@ namespace InventoryManagmentSystem
 
         private void CSVbutton_Click(object sender, EventArgs e)
         {
+            string folder = "C:\\InventoryManagementSystem\\Files";
+            string fileName = "products.csv";
+            string path = Path.Combine(folder, fileName);
 
-            StringBuilder sb = new StringBuilder();
-            string[] columnNames = inventory.Columns.Cast<DataColumn>().Select(column => column.ColumnName).ToArray();
-            string[] file = File.ReadAllLines("test.csv");
-            if (file.Length == 1) 
-                sb.AppendLine(string.Join(",", columnNames));
-            foreach (DataRow row in inventory.Rows)
-            {
-                string[] fields = row.ItemArray.Select(field => field.ToString()).ToArray();
-                sb.AppendLine(string.Join(",", fields));
-
-                File.AppendAllText("test.csv", sb.ToString());
-                newButton_Click(sender, e);
+            if (!Directory.Exists(folder)) {
+                MessageBox.Show("Folder does not exist");
             }
-            
+
+            using (StreamWriter file = new(path))
+            {
+                StringBuilder sb = new StringBuilder();
+                string[] columnNames = inventory.Columns.Cast<DataColumn>().Select(column => column.ColumnName).ToArray();
+                sb.AppendLine(string.Join(",", columnNames));
+                foreach (DataRow row in inventory.Rows)
+                {
+                    string[] fields = row.ItemArray.Select(field => field.ToString()).ToArray();
+                    sb.AppendLine(string.Join(",", fields));
+
+                    file.WriteLine(sb.ToString());
+                    MessageBox.Show("File created");
+                    newButton_Click(sender, e);
+                }
+            }
         }
 
         private void sellButton_Click(object sender, EventArgs e)
